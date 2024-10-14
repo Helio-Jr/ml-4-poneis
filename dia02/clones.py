@@ -14,16 +14,16 @@ df['Status_bool'] = df['Status '] == 'Apto'
 df
 
 # %%
-df.groupby(["Distância Ombro a ombro"])['Status_bool'].mean()
+df.groupby(["Distância Ombro a ombro"])['Status_bool'].mean().sort_values(ascending=False)
 
 # %%
-df.groupby(["Tamanho do crânio"])['Status_bool'].mean()
+df.groupby(["Tamanho do crânio"])['Status_bool'].mean().sort_values(ascending=False)
 
 # %%
-df.groupby(["Tamanho dos pés"])['Status_bool'].mean()
+df.groupby(["Tamanho dos pés"])['Status_bool'].mean().sort_values(ascending=False)
 
 # %%
-df.groupby(["General Jedi encarregado"])['Status_bool'].mean()
+df.groupby(["General Jedi encarregado"])['Status_bool'].mean().sort_values(ascending=False)
 
 # %%
 
