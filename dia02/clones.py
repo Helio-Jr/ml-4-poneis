@@ -66,3 +66,9 @@ tree.plot_tree(arvore,
                filled=True,
                )
 # %%
+mask1 = (df["Estatura(cm)"] <= 180.555) & (df["Estatura(cm)"] >= 180.245)
+mask2 = df["Massa(em kilos)"] <= 83.405
+df_filtered = df[mask1 & mask2]
+df_filtered['Status '].value_counts()
+# %%
+X

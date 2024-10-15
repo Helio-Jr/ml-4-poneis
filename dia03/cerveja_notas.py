@@ -25,7 +25,7 @@ reg.fit(df[["cerveja"]], df["nota"])
 
 # %%
 a, b = reg.intercept_, reg.coef_[0]
-print(f"a={a}; b={b}")
+print(f"a = {a}; b = {b}")
 
 # %%
 X = df[["cerveja"]].drop_duplicates()
@@ -41,6 +41,20 @@ plt.xlim(0, 11)
 plt.xlabel("Cerveja")
 plt.ylabel("Nota")
 plt.show()
+
+# %%
+from sklearn import tree
+arvore = tree.DecisionTreeRegressor(max_depth=2)
+arvore.fit(df[["cerveja"]], df["nota"])
+
+plt.figure(dpi=600)
+tree.plot_tree(arvore,
+              class_names=["nota"],
+              feature_names=[['cerveja']],
+              filled = True)
+
+arvore.predict(X)
+
 
 # %%
 
